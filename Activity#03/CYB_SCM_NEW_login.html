@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href=" css_template.css">
+    
+    <script>
+      function validate() {
+        var username = document.getElementById("user").value;
+        var password = document.getElementById("pass").value;
+        
+        if (username == "admin" && password == "admin" ) {
+          alert("Login Successfully");
+          window.location="CYB_SCM_NEW_inbound.html";
+          return false;
+        }
+        else{
+          alert("Login Failed, retry");
+        }
+      }
+      
+    </script>
+</head>
+<body>
+
+  <form method="get" class="form-container">
+    <h2 class="form-header"> User Login </h2>
+        <br>
+          <label class="form-label"> Username : </label>
+          <input type="text" id="user" class="form-input" placeholder="Enter username . . ." required />
+        <br>
+           <label class="form-label"> Password : </label>
+           <input type="password" id="pass" class="form-input" placeholder="Enter password . . ." required />
+        <br>
+    
+    <input type="button" id="submit" class="form-button" value="Submit" onclick="validate()"/>
+    
+  </form>
+      
+</body>
+</html>
